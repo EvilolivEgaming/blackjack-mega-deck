@@ -1,0 +1,48 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackjack Mega Deck</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="table-wrap">
+    <section class="table">
+      <h1>Blackjack Mega Deck</h1>
+
+      <div class="scoreboard">
+        <div class="score-item">Bankroll: <span id="bankroll">1000</span></div>
+        <div class="score-item">Highest Bankroll Ever: <span id="highscore">1000</span></div>
+      </div>
+
+      <div class="bet-row">
+        <label for="bet-input">Bet</label>
+        <input id="bet-input" type="number" min="1" step="1" placeholder="Enter whole number" />
+        <button id="deal-btn" type="button">Deal</button>
+      </div>
+
+      <p id="error-message" class="error" aria-live="polite"></p>
+      <p id="status-message" class="status" aria-live="polite">Place a bet, then press Deal.</p>
+
+      <section class="hand-section">
+        <h2>Dealer <span id="dealer-total" class="total"></span></h2>
+        <div id="dealer-cards" class="cards"></div>
+      </section>
+
+      <section class="hand-section">
+        <h2>Player <span id="player-total" class="total"></span></h2>
+        <div id="player-cards" class="cards"></div>
+      </section>
+
+      <div class="actions">
+        <button id="hit-btn" type="button" disabled>Hit</button>
+        <button id="stand-btn" type="button" disabled>Stand</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
